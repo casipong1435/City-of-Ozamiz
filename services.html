@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="./src/header.js"></script>
+  <custom-head></custom-head>
+  <title>Services - Ozamiz City</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <custom-nav></custom-nav>
+  
+
+  <main>
+
+    <section class="container mx-auto px-6 py-12 mt-14 mb-5">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Essential Services in Ozamiz</h2>
+    
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <!-- Healthcare -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-red-500 text-5xl mb-2">🏥</div>
+          <h3 class="text-xl font-semibold text-gray-700">Healthcare</h3>
+          <p class="text-gray-600 mt-2">Ozamiz is home to several hospitals, including **Mayor Hilarion A. Ramiro Sr. Medical Center**, providing specialized and emergency care. Numerous private clinics, diagnostic centers, and pharmacies ensure accessible healthcare for residents.</p>
+        </div>
+    
+        <!-- Education -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-blue-500 text-5xl mb-2">📚</div>
+          <h3 class="text-xl font-semibold text-gray-700">Education</h3>
+          <p class="text-gray-600 mt-2">Top institutions like **Misamis University**, **La Salle University**, and **Northwestern Mindanao State College of Science and Technology (NMSC)** offer quality education from primary to tertiary levels.</p>
+        </div>
+    
+        <!-- Public Safety -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-yellow-500 text-5xl mb-2">🚔</div>
+          <h3 class="text-xl font-semibold text-gray-700">Public Safety</h3>
+          <p class="text-gray-600 mt-2">Ozamiz ensures safety through the **Philippine National Police (PNP) headquarters, Bureau of Fire Protection (BFP), and local barangay patrol units**. CCTV monitoring and emergency hotlines enhance security.</p>
+        </div>
+    
+        <!-- Transportation -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-green-500 text-5xl mb-2">🚌</div>
+          <h3 class="text-xl font-semibold text-gray-700">Transportation</h3>
+          <p class="text-gray-600 mt-2">The city features a **modern port for inter-island travel, a well-connected bus terminal**, and accessible jeepneys and tricycles. **Labo Airport** supports domestic flights, enhancing connectivity.</p>
+        </div>
+    
+        <!-- Utilities -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-purple-500 text-5xl mb-2">⚡</div>
+          <h3 class="text-xl font-semibold text-gray-700">Utilities</h3>
+          <p class="text-gray-600 mt-2">Electricity is supplied by **MORESCO**, while **Misamis Occidental Water District** provides clean water services. High-speed internet and telecommunications are available via **PLDT, Globe, and Smart**.</p>
+        </div>
+    
+        <!-- Business & Commerce -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-indigo-500 text-5xl mb-2">🏢</div>
+          <h3 class="text-xl font-semibold text-gray-700">Business & Commerce</h3>
+          <p class="text-gray-600 mt-2">A growing economy supported by **Gaisano Capital, Robinsons, and local markets**. The city is a hub for agriculture, fisheries, and trade, attracting investors and entrepreneurs.</p>
+        </div>
+    
+        <!-- Tourism & Hospitality -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-teal-500 text-5xl mb-2">🏨</div>
+          <h3 class="text-xl font-semibold text-gray-700">Tourism & Hospitality</h3>
+          <p class="text-gray-600 mt-2">Visitors can stay in **Royal Garden Hotel, Asia Novo Hotel, and local resorts**. Tourists enjoy heritage sites, religious landmarks, and annual festivals.</p>
+        </div>
+    
+        <!-- Banking & Finance -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-orange-500 text-5xl mb-2">💳</div>
+          <h3 class="text-xl font-semibold text-gray-700">Banking & Finance</h3>
+          <p class="text-gray-600 mt-2">Banks like **BDO, Metrobank, Landbank, and local cooperatives** support financial services, ensuring accessible banking and investment opportunities.</p>
+        </div>
+    
+        <!-- Agriculture & Fisheries -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-lime-500 text-5xl mb-2">🌾</div>
+          <h3 class="text-xl font-semibold text-gray-700">Agriculture & Fisheries</h3>
+          <p class="text-gray-600 mt-2">Rice, coconut, and aquaculture industries thrive, with government support programs aiding local farmers and fisherfolk.</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <custom-footer></custom-footer>
+  </main>
+
+  <script>
+    $("#menu-toggle").click(function () {
+      $("#mobile-menu").toggleClass("hidden");
+    });
+
+    var currentUrl = window.location.href;
+
+      // Loop through each nav link
+      $(".nav-link").each(function () {
+        var linkUrl = $(this).attr("href");
+
+        // Check if the link matches the current URL
+        if (currentUrl.includes(linkUrl)) {
+          $(".nav-link").removeClass("active"); // Remove active class from others
+          $(this).addClass("active"); // Add active class to the matched link
+        }
+      });
+  </script>
+</body>
+
+</html>

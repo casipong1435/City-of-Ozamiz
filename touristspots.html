@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="./src/header.js"></script>
+  <custom-head></custom-head>
+  <title>Tourist Spots - Ozamiz City</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <custom-nav></custom-nav>
+  
+
+  <main>
+
+    <section class="container mx-auto px-6 py-12 mt-14 mb-5">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Ozamiz City Top Attractions</h2>
+    
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tourist Spot 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/shrine.jpeg" alt="Cotta Fort" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Cotta Fort & Shrine</h3>
+            <p class="text-gray-600 mt-2">A historical fortress built in 1755, offering scenic views and a deep connection to Ozamiz's past.</p>
+          </div>
+        </div>
+    
+        <!-- Tourist Spot 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/bukagan.jpeg" alt="Bukagan Hill" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Bukagan Hill</h3>
+            <p class="text-gray-600 mt-2">Home to the legendary four giant bells, this hill offers a breathtaking panoramic view of the city.</p>
+          </div>
+        </div>
+    
+        <!-- Tourist Spot 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/botanical.jpg" alt="Naomi’s Botanical Garden" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Naomi’s Botanical Garden</h3>
+            <p class="text-gray-600 mt-2">A lush green paradise featuring exotic plants, colorful flowers, and a relaxing ambiance.</p>
+          </div>
+        </div>
+    
+       
+    
+        <!-- Tourist Spot 6 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/lasalle.jpeg" alt="Mount Malindang" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">The Rodriguez Ancestral House</h3>
+            <p class="text-gray-600 mt-2">Notably, local accounts suggest that during his exile in Dapitan, national hero Dr. José Rizal spent a night in this residence.</p>
+          </div>
+        </div>
+
+         <!-- Tourist Spot 6 -->
+         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/gala.jpeg" alt="Mount Malindang" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800"></h3>
+            <p class="text-gray-600 mt-2">Connect with nature in Gala - Tespi Farm</p>
+          </div>
+        </div>
+
+         <!-- Tourist Spot 6 -->
+         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/camp2.jpg" alt="Mount Malindang" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Cotta Fort</h3>
+            <p class="text-gray-600 mt-2">Cotta Fort, formally Fuerte de la Concepcion y del Triunfo, was built in 1756 by Father Jose Ducos to protect Ozamiz City and its people from Moro pirates and served as a Spanish outpost.</p>
+          </div>
+        </div>
+
+         <!-- Tourist Spot 6 -->
+         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/cathedral.webp" alt="Mount Malindang" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">The Metropolitan Cathedral of the Immaculate Conception in Ozamiz City</h3>
+            <p class="text-gray-600 mt-2">originally a parish church, was elevated to a cathedral in 1951 when the Territorial Prelature of Ozamiz was established, and later to an archdiocese in 1983. </p>
+          </div>
+        </div>
+
+        <!-- Tourist Spot 6 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/wellness.jpeg" alt="Mount Malindang" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Wellness Park</h3>
+            <p class="text-gray-600 mt-2">Aims to promote physical and mental well-being by providing accessible green spaces and recreational opportunities for activities like walking, running, sports, and nature engagement, ultimately contributing to a healthier and happier community. </p>
+          </div>
+        </div>
+
+        <!-- Tourist Spot 6 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <img src="./assets/boulevard.jpg" alt="Mount Malindang" class="w-full h-56 object-contain">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Coastal Road - Boulevard</h3>
+            <p class="text-gray-600 mt-2">expedites and enhances the comfort of goods transportation from Ozamiz Port, eliminating the need to traverse city centers and thereby mitigating traffic congestion.</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+    </section>
+
+    
+    
+    
+    <custom-footer></custom-footer>
+  </main>
+
+  <script>
+    $("#menu-toggle").click(function () {
+      $("#mobile-menu").toggleClass("hidden");
+    });
+
+    var currentUrl = window.location.href;
+
+      // Loop through each nav link
+      $(".nav-link").each(function () {
+        var linkUrl = $(this).attr("href");
+
+        // Check if the link matches the current URL
+        if (currentUrl.includes(linkUrl)) {
+          $(".nav-link").removeClass("active"); // Remove active class from others
+          $(this).addClass("active");
+           // Add active class to the matched link
+        }
+      });
+
+  </script>
+</body>
+
+</html>

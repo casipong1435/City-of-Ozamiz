@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./src/header.js"></script>
+    <custom-head></custom-head>
+    <title>About - Ozamiz City</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <custom-nav></custom-nav>
+
+    <main class="bg-gray">
+      <section class="container mx-auto px-6 py-12 mt-14 mb-5">
+        <div
+          class="font-bold text-4xl text-gray-800 mb-10 text-center md:text-start"
+        >
+          History of Ozamiz City
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="col-span-1">
+            <img
+              src="assets/forte.jpg"
+              alt="cotta fort"
+              class="w-full h-64 object-contain"
+            />
+          </div>
+          <div class="col-span-1">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
+              A Glimpse into the Past
+            </h2>
+            <strong>Spanish period</strong>
+            <p class="text-gray-600 leading-relaxed text-justify">
+              The city of Ozamiz grew out of an old Spanish town called
+              Misamis—a name believed to have been derived from the Subanen word
+              kuyamis, a variety of coconut. Other unverified historical
+              sources, however, suggest that the name Misamis came from the
+              Spanish word Misa (Catholic Mass).
+            </p>
+            <p class="text-gray-600 leading-relaxed mt-4 text-justify">
+              The old Spanish town grew in size due to the nearby Spanish
+              garrison stationed at the stone fort named Fuerte de la Concepcion
+              y del Triunfo. The fort was constructed some time in 1756 in order
+              to attempt to combat the pirate activities originating in the
+              nearby Lanao area. In 1850, the town of Misamis became the capital
+              of the District of Misamis until during the 1870s, when the
+              capital was transferred to Cagayan de Oro.
+            </p>
+          </div>
+
+          <div class="col-span-1">
+            <strong>American period and World War II</strong>
+            <p class="text-gray-600 leading-relaxed mt-4 text-justify">
+              During the American occupation, the territory was reduced when
+              Governor-General Francis Burton Harrison issued Executive Order
+              No. 61, series of 1920; the barrios, which was once part of the
+              former municipality of Loculan, were separated and organized into
+              new municipalities of Clarin and Tudela. In October 1942, Wendell
+              Fertig established the command headquarters of the growing
+              guerrilla resistance to the Japanese occupation of Mindanao in the
+              Spanish fort in the city. His headquarters was abandoned June 26,
+              1943, due to a large Japanese attack. Until the end of the war,
+              the Japanese occupied this fort. During the Japanese occupation of
+              Misamis in World War II, the fort was garrisoned by a contingent
+              of Japanese who dug foxholes near or under the walls. This
+              undermining of walls later led to the destruction of the southwest
+              bastion in the earthquake of 1955.
+            </p>
+          </div>
+          <div class="col-span-1">
+            <img
+              src="assets/camp.jpg"
+              alt="cotta fort"
+              class="w-full h-64 object-contain"
+            />
+          </div>
+          
+
+          <div class="col-span-1 md:col-span-2">
+            <strong>Contemporary Period</strong>
+            <p class="text-gray-600 leading-relaxed mt-4 text-justify">
+              After the war, Misamis became a chartered city by virtue of
+              Republic Act 321 on July 16, 1948. This also renamed Misamis to
+              Ozamiz, after the hero José Ozámiz who hailed from the province of
+              Misamis Occidental and who at one time also served as its first
+              governor and congressional representative of the Lone District of
+              Misamis Occidental, a delegate to the 1935 Constitutional
+              Convention that resulted in the creation of the 1935 Constitution
+              for the Philippine Commonwealth Government. In 1941, José Ozámiz
+              was elected to the Philippine Senate. On February 25, 2000, three
+              Super Five Transport buses aboard the M/V Our Lady of Mediatrix
+              ferry exploded while the ferry was traveling from Kolambugan,
+              Lanao del Norte to the Port of Ozamiz. The reason for the
+              explosion was the use of large incendiary bombs, resulting in 44
+              deaths and more than 100 passengers wounded. On July 30, 2017, the
+              Criminal Investigation and Detection Group and the Ozamiz City
+              Police raided the house of incumbent Mayor Reynaldo Parojinog Sr.
+              where guns were allegedly stored, resulting in the deaths of 16
+              people, including Mayor Parojinog, his wife Susan, and two of his
+              siblings. The raid also ended with the mayor's children, incumbent
+              Vice Mayor Nova Princess Parojinog-Echavez and Reynaldo Parojinog
+              Jr., being arrested. This incident was part of the War on Drugs
+              campaign during President Rodrigo Duterte's administration.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      <custom-footer></custom-footer>
+    </main>
+
+    <script>
+      $("#menu-toggle").click(function () {
+        $("#mobile-menu").toggleClass("hidden");
+      });
+
+      var currentUrl = window.location.href;
+
+      // Loop through each nav link
+      $(".nav-link").each(function () {
+        var linkUrl = $(this).attr("href");
+
+        // Check if the link matches the current URL
+        if (currentUrl.includes(linkUrl)) {
+          $(".nav-link").removeClass("active"); // Remove active class from others
+          $(this).addClass("active"); // Add active class to the matched link
+        }
+      });
+    </script>
+  </body>
+</html>
